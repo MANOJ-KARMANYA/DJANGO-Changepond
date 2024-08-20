@@ -8,12 +8,12 @@ def forms_page(request):
         if form.is_valid():
             print(form.cleaned_data)
             return HttpResponseRedirect('/user/Thanks')
-    #     else:
-    #         return render(request, 'user_profile/forms.html', {
-    #             'formss': form,
-    #             'formss.user_name.errors':True
-    #         })
-    # else:
+        else:
+            return render(request, 'user_profile/forms.html', {
+                'formss': form,
+                'formss.user_name.errors':True
+            })
+    else:
         form = forms_page_class()
 
         return render(request, 'user_profile/forms.html', {'formss': form})
