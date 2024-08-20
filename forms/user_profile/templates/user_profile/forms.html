@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <center>
+        <h2>Forms </h2>
+        <form  method="Post">
+            {% csrf_token %}
+            {{ formss.user_name.label_tag }}
+            {{ formss.user_name }}
+            {% if formss.user_name.errors %}
+                <p>{{ formss.user_name.errors.0 }}</p>
+            {% endif %}
+            
+
+            {% comment %} <label for="name">Name : </label> {% endcomment %}
+            {% comment %} <input id='username'type="text" name= "username"><br><br><br> {% endcomment %}
+
+            {% comment %} <label for="phone">Phone : </label>
+            <input type="text" name= "phone"><br><br><br>
+    
+            <label for="address">Address : </label>
+            <input type="text" name= "address"><br><br><br>
+    
+            <label for="course">Course : </label>
+            <input type="text" name= "course"><br><br><br> {% endcomment %}
+            
+            <button type="Submit">Send</button>
+            
+    
+        </form>
+    </center>
+</body>
+</html>

@@ -10,7 +10,7 @@ week_schedule = {
     'thusday': 'Learning Angular',
     'friday': 'Learning React',
     'saturday': 'Learning jest',
-    'sunday': 'Learning Git',
+    'sunday': 'Learning Git'
 }
 
 

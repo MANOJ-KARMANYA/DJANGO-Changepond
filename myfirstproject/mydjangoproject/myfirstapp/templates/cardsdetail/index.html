@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block page_title %}{{section_name}}{% endblock %}
+{% block content %}
+{% include 'includes/header.html' %}
+<div id="section1" class="section text-center py-4">
+    <div class="container">
+        <h1 class="display-4">{{ section_name }}</h1>
+        
+    </div>   
+        <br>
+        <h3>INTRODUCTION</h3>
+        <p>Welcome to our website! We're excited to have you here and invite you to explore a wealth of resources and insights tailored just for you. Whether you’re interested in the latest updates, expert advice, or simply discovering new content, we have something for everyone. Our platform is designed with you in mind, aiming to provide a seamless and enriching experience. Dive in and explore what we have to offer. We hope you find our content valuable and engaging. Thank you for visiting, and we look forward to your feedback! </p>
+</div>
+
+    <div id="section2" class="section">    
+        {% include 'includes/cards.html' %}
+    </div>
+    {% include 'includes/footer.html' %}
+{% endblock %}
+
