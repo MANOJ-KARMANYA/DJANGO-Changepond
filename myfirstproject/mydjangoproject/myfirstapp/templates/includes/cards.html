@@ -2,21 +2,48 @@
 {% block page_title %}All Posts{% endblock %}
 
 {% block content %}
+
+
 <div class="container mt-4">
     <div class="row g-4">
+
+    {% if show_all %}    
         {% for card in cards %}
         <div class="col-md-4">
             <div class="card h-100">
-                <img src="{{ card.image }}" class="card-img-top img-fluid" alt="Image {{ card.id }}">
+                
+                <img src="{{ card.image.url }}" class="card-img-top img-fluid" alt="Image {{ card.id }}">
+                
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ card.card_title }}</h5>
-                    <p class="card-text">{{ card.card_description|slice:":100" }}{% if card.card_description|length > 100 %}...{% endif %}</p>
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.description|slice:":100" }}{% if card.card_description|length > 100 %}...{% endif %}</p>
                     <a href="{% url 'detail_page' card_id=card.id %}" class="btn btn-dark">Know More</a>
                 </div>
             </div>
         </div>
         {% endfor %}
+    {% else %}
+        {% for card in cards|slice:":6" %}
+        <div class="col-md-4">
+            <div class="card h-100">
+                
+                <img src="{{ card.image.url }}" class="card-img-top img-fluid" alt="Image {{ card.id }}">
+                
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ card.title }}</h5>
+                    <p class="card-text">{{ card.description|slice:":100" }}{% if card.card_description|length > 100 %}...{% endif %}</p>
+                    <a href="{% url 'detail_page' card_id=card.id %}" class="btn btn-dark">Know More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+
+
     </div>
 </div>
+
+
 {% endblock %}
 

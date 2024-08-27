@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block page_title %}{{section_name}}{% endblock %}
+{% block content %}
+{% include 'includes/headerback.html' %}
+<div id="section1" class="section text-center py-4">
+    <div class="container">
+        <h1 class="display-4">{{ section_name }}</h1>
+
+
+    <div id="section2" class="section">    
+        {% include 'includes/cards.html' %}
+        <br>
+    </div>
+    <br>
+</div>
+</div>
+
+    
+{% include 'includes/footer.html' %}
+{% endblock %}
+

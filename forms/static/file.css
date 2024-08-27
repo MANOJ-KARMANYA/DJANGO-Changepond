@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    background-color: #e9ecef; /* Light grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #495057; /* Darker text color */
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 12px; /* Rounded corners */
+    padding: 40px; /* Generous padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Max width for responsiveness */
+    margin: 40px auto; /* Centered horizontally with margin */
+}
+
+/* Header styling */
+h2 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Slightly bolder font */
+    margin-bottom: 2rem; /* Space below header */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1.5rem; /* Space between form elements */
+}
+
+.form-group .form-label {
+    font-size: 1rem; /* Label font size */
+    font-weight: 500; /* Medium font weight */
+    margin-bottom: 0.5rem; /* Space below label */
+    display: block; /* Ensure labels are block-level for proper spacing */
+}
+
+/* Input field styling */
+.form-control {
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside input fields */
+    font-size: 1rem; /* Font size inside input fields */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Subtle shadow on focus */
+}
+
+/* Error message styling */
+.form-error {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    margin-top: 0.25rem; /* Space above error message */
+}
+
+/* Submit button styling */
+.btn-submit {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Padding inside button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+}
+
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn-submit:active {
+    background-color: #004085; /* Even darker blue when button is pressed */
+    transform: translateY(0); /* Reset lift effect */
+}
