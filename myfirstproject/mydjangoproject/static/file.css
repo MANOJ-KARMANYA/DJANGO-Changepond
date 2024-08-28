@@ -55,3 +55,82 @@
 
 
 
+
+
+/* this is for the form design */
+
+
+
+/* General form styling */
+form {
+    max-width: 800px; /* Limit the form width */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ddd; /* Light border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Styling for form paragraphs */
+form p {
+    margin-bottom: 1.5em; /* Space between form fields */
+}
+
+/* Label styling */
+form p label {
+    font-weight: bold; /* Bold labels */
+    display: block; /* Labels as block elements */
+    margin-bottom: 0.5em; /* Space below label */
+    color: #333; /* Dark gray text */
+}
+
+/* Input field styling */
+form p input[type="text"],
+form p input[type="file"],
+form p input[type="email"],
+form p input[type="password"],
+form p textarea,
+form p select {
+    width: 100%; /* Full width of the container */
+    padding: 0.75em; /* Padding inside fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px; /* Font size for input text */
+    color: #333; /* Dark gray text */
+}
+
+/* Textarea specific styling */
+form p textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px; /* Minimum height for the textarea */
+}
+
+/* File input styling */
+form p input[type="file"] {
+    padding: 0.5em 0; /* Less padding for file inputs */
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+    width: auto; /* Auto width for button */
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 0.75em 1.5em; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+}
+
+/* Submit button hover effect */
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+form .error {
+    color: red; /* Red color for error messages */
+    font-size: 14px; /* Font size for error messages */
+    margin-top: 0.5em; /* Space above error messages */
+}

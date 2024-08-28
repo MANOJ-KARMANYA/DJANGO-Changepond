@@ -45,7 +45,7 @@ def second_page(request):
 
 def detail_page(request, card_id):
 
-    cards_data = Posts.objects.filter(id=card_id)
+    cards_data = Posts.objects.filter(slug=card_id)
     return render(request, 'cardsdetail/detail.html', {"cards": cards_data})
     # return render(request, 'cardsdetail/detail.html', {"card": cards_data[0]})
 #we can try converting the querryset to dictionary 

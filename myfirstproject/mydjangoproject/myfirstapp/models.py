@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -15,10 +16,18 @@ class Posts(models.Model):
     posted_at = models.DateTimeField(auto_now_add=True)
     posted_by = models.CharField(max_length=500)
     author = models.ForeignKey(Author, on_delete=models.CASCADE,default=1)
+    slug = models.SlugField(unique=True, editable=False)
+
+    def save(self,*args,**kwargs):
+        self.slug=slugify(self.title)
+        super().save(*args,**kwargs)
 
     def __str__(self):
         return f"Title: {self.title} \nDescription: {self.description} \nImage: {self.image} \nPosted at: {self.posted_at} \nPosted By: {self.posted_by}"
     
+    
+
+
         # return f"Title: {self.title} \nDescription: {self.description} \nImage: {self.image} \nPosted at: {self.posted_at} \nPosted By: {self.posted_by}"
     
 class Comment(models.Model):
